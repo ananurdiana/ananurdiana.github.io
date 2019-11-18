@@ -1,3 +1,7 @@
 theme: jekyll-theme-hacker
 title: Selamat Datang
 description: Belajar Bersama
+
+---
+permalink: /404.md
+---
