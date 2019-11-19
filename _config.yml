@@ -1,15 +1,5 @@
-theme: jekyll-theme-leap-day
-title: [Ana Nurdiana](/)
+title: Ana Nurdiana
 description: Catatan sebagai pengingat
-
-header_pages:
-  - about.md
-  - portfolio.md
-
-github:
-  zip_url: http://example.com/download.zip
-  another_url: Ana Nurdiana
-  is_project_page: false
 
 ---
 permalink: /404.md
