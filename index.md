@@ -2,11 +2,14 @@
 
 Github Page ini berisi catatan saya.
 
-## Linux
-Catatan tentang linux
-- [SSH Tanpa Login](/linux/ssh-tanpa-login)
+## [Linux](/linux/)
 
-## Programming
+Catatan Tentang Linux
+
+## [Programming](/programming/)
+
 Catatan Tentang Programming
 
-## [Database](https://ananurdiana.github.io/database/)
+## [Database](/database/)
+
+Catatan Tentang Database
