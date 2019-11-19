@@ -2,6 +2,10 @@ theme: jekyll-theme-leap-day
 title: Ana Nurdiana
 description: Catatan sebagai pengingat
 
+header_pages:
+  - about.md
+  - portfolio.md
+
 ---
 permalink: /404.md
 ---
