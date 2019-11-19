@@ -6,6 +6,9 @@ header_pages:
   - about.md
   - portfolio.md
 
+github:
+  is_project_page: false
+
 ---
 permalink: /404.md
 ---
