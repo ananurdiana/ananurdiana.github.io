@@ -2,6 +2,9 @@ theme: jekyll-theme-leap-day
 title: Ana Nurdiana
 description: Catatan sebagai pengingat
 
+github:
+  is_project_page: true
+
 ---
 permalink: /404.md
 ---
