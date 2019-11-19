@@ -1,7 +1,7 @@
 theme: jekyll-theme-leap-day
 title: Ana Nurdiana
 description: Catatan sebagai pengingat
-
+site.lang: id-ID
 ---
 permalink: /404.md
 ---
