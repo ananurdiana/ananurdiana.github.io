@@ -24,3 +24,4 @@ WHERE
 GROUP BY
     table_schema;
 sql
+```
