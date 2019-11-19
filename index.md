@@ -8,7 +8,5 @@ Catatan tentang linux
 
 ## Programming
 Catatan Tentang Programming
-### PHP
-### NodeJS
-### .NET
-### Javascript
+
+## [Database](https://ananurdiana.github.io/database/)
