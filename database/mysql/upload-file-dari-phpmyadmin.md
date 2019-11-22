@@ -1,6 +1,6 @@
 # Execute CLI Command
 
-Pada halaman ini saya akan mencoba Execute CLI Command dari MySQL/MariaDB
+Pada halaman ini saya akan mencoba Upload File dari PHPMyAdmin
 
 ## Buat table baru
 ```sql
