@@ -4,7 +4,6 @@ Pada catatan ini, saya ingin membuat program PHP untuk menampilkan list file di 
 
 ```php
 <?php
-<?php
 
 $title = "List File";
 $os_type = PHP_OS;
@@ -104,7 +103,6 @@ function CheckOSSeparator($os_type){
 	}
 }
 
-?>
 ```
 
 Berikut [link program](https://ananurdiana.github.io/programming/php/list_file.php) lengkapnya.
