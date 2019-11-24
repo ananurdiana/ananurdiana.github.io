@@ -1,15 +1,15 @@
-## Hai
+## Blog Ana Nurdiana
 
 Github Page ini berisi catatan saya.
 
-## [Linux](/linux/)
+## [Linux](/blog/linux/)
 
 Catatan Tentang Linux
 
-## [Programming](/programming/)
+## [Programming](/blog/programming/)
 
 Catatan Tentang Programming
 
-## [Database](/database/)
+## [Database](/blog/database/)
 
 Catatan Tentang Database
