@@ -1,3 +1,3 @@
 # Programming
 
- - [PHP](/programming/php)
+ - [PHP](/blog/programming/php)
