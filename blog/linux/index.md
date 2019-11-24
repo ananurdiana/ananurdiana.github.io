@@ -2,4 +2,4 @@
 Catatan Tentang Linux
 
 ## SSH
- - [SSH Tanpa Login](https://ananurdiana.github.io/linux/ssh-tanpa-login)
+ - [SSH Tanpa Login](/blog/linux/ssh-tanpa-login)
