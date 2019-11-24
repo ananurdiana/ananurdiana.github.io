@@ -1,4 +1,4 @@
-# Cara Menampilkan Database Size di MySQL / MariaDB
+#### Cara Menampilkan Database Size di MySQL / MariaDB
 Jalankan query berikut di query editor:
 ```sql
 SELECT
