@@ -48,21 +48,7 @@
 				<li class="nav-item">
 					<a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#education">Education</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
-				</li>
-				<!-- <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li> -->
+				
 			</ul>
 		</div>
 	</nav>
@@ -77,6 +63,9 @@
 				<div class="subheading mb-5">
 					{{ page.description | default: site.description | default: site.github.project_tagline }}
 				</div>
+				
+				<hr/>
+				
 				{{ content }}
 			</div>
 		</section>
