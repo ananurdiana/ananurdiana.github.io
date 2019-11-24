@@ -1,3 +1,3 @@
-# Programming
+#### Programming
 
- - [PHP](/blog/programming/php)
+ - [PHP](php)
