@@ -1,6 +1,7 @@
 #### Blog Ana Nurdiana
 
-Terimakasih telah berkunjung, semoga harimu menyenangkan
+Terimakasih telah berkunjung, semoga harimu menyenangkan.
+
 Github Page ini berisi catatan saya.
 
 ##### [Linux](/blog/linux/)
