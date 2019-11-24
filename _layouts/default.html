@@ -69,7 +69,7 @@
 
 	<div class="container-fluid p-0">
 
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+		<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
 			<div class="w-100">
 				<h1 class="mb-0">
 					{{ site.name | page.title | default: site.title | default: site.github.repository_name }}</span>
@@ -77,17 +77,9 @@
 				<div class="subheading mb-5">
 					{{ page.description | default: site.description | default: site.github.project_tagline }}
 				</div>
-			</div>
-		</section>
-
-		<hr class="m-0">
-
-		<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
-			<div class="w-100">
 				{{ content }}
 			</div>
 		</section>
-
 		
 	</div>
 
