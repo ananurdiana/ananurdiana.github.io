@@ -1,11 +1,11 @@
-# SSH Tanpa Login
+#### SSH Tanpa Login
 
 Reference: [SSH login without password](http://www.linuxproblem.org/art_9.html)
 
-## Tujuan saya
+##### Tujuan saya
 Saya ingin login ke SSH dari bash script, jadi tanpa meminta password
 
-## Langkah-langkah
+##### Langkah-langkah
 1. Login ke komputer A sebagai user a dan generate pasangan authentication keys. Jangan memasukan passphrase:
 ```
 a@A:~> ssh-keygen -t rsa
@@ -34,7 +34,7 @@ b@B's password:
 a@A:~> ssh b@B
 ```
 
-## Remote SSH dari BASH Script
+##### Remote SSH dari BASH Script
 Reference: [](https://stackoverflow.com/questions/216202/why-does-an-ssh-remote-command-get-fewer-environment-variables-then-when-run-man)
 Caranya
 ```
