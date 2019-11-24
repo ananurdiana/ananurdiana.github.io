@@ -65,9 +65,11 @@
 
 		<section class="resume-section p-3 p-lg-5 d-flex align-items-center">
 			<div class="w-100">
-				<h1 class="mb-0">
-					{{ site.name | page.title | default: site.title | default: site.github.repository_name }}</span>
-				</h1>
+				<a href="/">
+					<h1 class="mb-0">
+						{{ site.name | page.title | default: site.title | default: site.github.repository_name }}</span>
+					</h1>
+				</a>
 				<div class="subheading mb-5">
 					{{ page.description | default: site.description | default: site.github.project_tagline }}
 				</div>
