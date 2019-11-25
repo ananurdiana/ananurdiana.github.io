@@ -5,5 +5,6 @@
     b = a.toLowerCase();
     id = b.replace(/ /g, "-");
     $(".navbar-nav").append('<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#'+id+'">'+a+'</a></li>');
+    console.log(a);
   }
 });
