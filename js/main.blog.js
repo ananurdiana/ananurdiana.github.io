@@ -1,4 +1,4 @@
-(function(){
+$(function() {
   // side menu
   for(var i = 0; i< $('h5').length; i++){
     a = $('h5:eq('+i+')').text();
