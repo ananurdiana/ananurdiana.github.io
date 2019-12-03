@@ -1,27 +1,27 @@
-# VB.NET CRUD DB
+#### VB.NET CRUD DB
 
-## Persiapan
+##### Persiapan
 - Install Visual Studio 2013
 - Install Database Server MySQL (bisa menggunakan XAMPP, WAMPP, LAMPP)
 - Install [Connector/NET 6.10.9](https://dev.mysql.com/downloads/connector/net/6.10.html)
 
-## Initialize Project
+##### Initialize Project
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/01-New%20Project.png "New Project")
 - Membuat project baru ```File -> New -> Project```
 - Pada Window New Project, Pilih ```Tempalates -> Visual Basic -> Windows Desktop```
 - Gunakan framework ```.NET Framework 4.5.2```
 - Isi nama project, Pilih lokasi Project, kemudian klik OK
 
-## Database MySQL
+##### Database MySQL
 Menggunakan Connector/NET 6.10
-### Membuat Database
+###### Membuat Database
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/03-Database.png "Database")
-### Desain tampilan / UI
+###### Desain tampilan / UI
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/02-Desain%20UI%20Mahasiswa.png "UI Mahasiswa")
-### Menambahkan Reference
+###### Menambahkan Reference
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/04-Menambahan%20reference.png "Menambahkan Reference")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/05-Menambahan%20reference%202.png "Menambahkan Reference")
-### Membuat Module
+###### Membuat Module
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/06-Menambahkan%20Module.png "Membuat Module")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/07-Menambahkan%20Module%202.png "Membuat Module")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/08-Menambahkan%20Module%203.png "Membuat Module")
@@ -56,7 +56,7 @@ Module koneksiMySQL
 
 End Module
 ```
-### VB.NET MySQL CRUD
+###### VB.NET MySQL CRUD
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/09-Koding%20CRUD.png "VB.NET MySQL CRUD")
 File ```Form1.vb``` :
 ```vb
@@ -225,23 +225,23 @@ Public Class frmMySQL
     End Sub
 End Class
 ```
-### Menjalankan Program
+###### Menjalankan Program
 Untuk menjalankan program, dapat menekan tombol ```F5``` di keyboard, atau dengan menu ```DEBUG -> Start Debugging```
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/10-Menjalankan%20program.png "Menjalankan Program")
-## SQLite
+##### SQLite
 Yang dibutuhakan untuk membuat CRUD pada SQLite adalah:
 - [DB Browser for SQLite](https://sqlitebrowser.org/dl/), silahkan download dari [https://sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
 - Install ```System.Data.SQLite``` dari ```Manage NuGet Packages```
-### Install System.Data.SQLite
+###### Install System.Data.SQLite
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/11-Install%20SQLite%201.png "Install System.Data.SQLite")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/12-Install%20SQLite%202.png "Install System.Data.SQLite")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/13-Install%20SQLite%203.png "Install System.Data.SQLite")
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/14-Install%20SQLite%204.png "Install System.Data.SQLite")
-### Membuat file Database SQLite
+###### Membuat file Database SQLite
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/15-Membuat%20File%20Database.png "Membuat file Database SQLite")
-### Desain tampilan / UI untuk SQLite
+###### Desain tampilan / UI untuk SQLite
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/16-Desain%20UI%20SQLite.png "Desain tampilan / UI untuk SQLite")
-### VB.NET SQLite CRUD
+###### VB.NET SQLite CRUD
 ![alt text](https://raw.githubusercontent.com/ananurdiana/vbnet_cruddb/master/dokumen/17-Script%20UI%20SQLite.png "VB.NET SQLite CRUD")
 File ```frmSQLite.vb``` :
 ```vb
@@ -376,7 +376,7 @@ Public Class frmSQLite
     End Sub
 End Class
 ```
-## WebRequest
+##### WebRequest
 Untuk melakukan request ke API
 ```vb
 Private Sub btnLamp_Click(sender As Object, e As EventArgs)
@@ -412,16 +412,16 @@ Private Sub btnLamp_Click(sender As Object, e As EventArgs)
 End Sub
 ```
 
-## SQL Server Express
+##### SQL Server Express
 
-## Membuat MDI Form
+##### Membuat MDI Form
 
-## Membuat Report
+##### Membuat Report
 Untuk membuat laporan menggunakan crystal report di visual studio (install `CRforVS_13_0_12.exe` sebelum mengikuti langkah-langkah berikutnya), dan database MySQL, terlebih dahulu harus menmbuat ODBC Data Source.
 Untuk membuat ODBC Data Source, harus install `mysql-connector-odbc` yang dapat di download dari [Web MySQL](https://dev.mysql.com/downloads/connector/odbc/).
 Setelah selesai install `mysql-connector-odbc`, selanjutnya membuat ODBC Data Source. 
 
-### Membuat ODBC Data Source
+###### Membuat ODBC Data Source
 1. Buka `Control Panel` > `Administrative Tools` > `Data Sources (ODBC)`
 2. Klik tombol `Add`
 3. Pilih `MySQL ODBC x.x ANSI Driver`
@@ -429,7 +429,7 @@ Setelah selesai install `mysql-connector-odbc`, selanjutnya membuat ODBC Data So
 5. Isi isian untuk konek ke database, kemudian klik tombol `OK`
 ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/18-BuatKoneksiODBC.png)
 
-### Desain Crystal Report
+###### Desain Crystal Report
 1. Buka project
 2. Klik kanan pada project, kemudian `Add` > `New Item`
 3. Pilih `Reporting`
@@ -456,7 +456,7 @@ Setelah selesai install `mysql-connector-odbc`, selanjutnya membuat ODBC Data So
 15. Tambahkan Field dari `Field Explorer` ke `Sections 3 (Details)` pada Crystal Report
     ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/28-MembuatCrystalReport-10.png)
 
-### Membuat Form untuk menampilkan Crystal Report
+###### Membuat Form untuk menampilkan Crystal Report
 1. Klik kanan pada project, kemudian `Add` > `New Item`
 2. Pilih `Windows Forms` kemudian pilih `Windows Forms`, beri nama file sesuai kebutuhan kemudia klik tombol `Add`
     ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/29-MembuatCrystalReport-11.png)
@@ -469,7 +469,7 @@ Setelah selesai install `mysql-connector-odbc`, selanjutnya membuat ODBC Data So
 6. Selanjutnya akan muncul data sample yang di random oleh Visual Studio
     ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/33-MembuatCrystalReport-15.png)
     
-### Menampilkan Crystal Report
+###### Menampilkan Crystal Report
 1. Buka form `MySQL`, kemudian tambahkan combobox dan button seperti pada gambar
     ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/34-MenampilkanCrystalReport-01.png)
 2. Tambahkan event click pada button
@@ -481,4 +481,4 @@ Setelah selesai install `mysql-connector-odbc`, selanjutnya membuat ODBC Data So
     ![alt text](https://raw.githubusercontent.com/ananurdiana/VB.NET-CRUD-DB/master/dokumen/35-MenampilkanCrystalReport-05.png)
 
 
-## Membuat Installer
+##### Membuat Installer
