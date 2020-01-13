@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IG HASTAG Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <style>
+      .row{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>IG HASTAG Generator</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label for="initialHASTAG">Initial HASTAG</label>
+      </div>
+      <div class="col-md-9">
+        <textarea class="form-control" id='initialHASTAG' placeholder="Initial HASTAG"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">&nbsp;</div>
+      <div class="col-md-9">
+        <button class="btn btn-primary" id="btnGenerate">Generate</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <textarea class="form-control" id='resultHASTAG' rows="10" placeholder="Result HASTAG"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table table-bordered table-hover table-striped" id="tableResult">
+          <thead>
+            <th>HASHTAGS</th>
+            <th>POSTS</th>
+          </thead>
+          <tbody id="listTag">
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      $(function(){
+        console.log('##################################');
+        console.log('# Referensi: https://HASTAGwordtool.io/');
+        console.log('##################################');
+
+        // data table
+        $('#tableResult').DataTable();
+        
+
+        $('#btnGenerate').click(function(){
+          var initialHASTAG = $('#initialHASTAG').val();
+          if (initialHASTAG==='') {
+            Swal.fire({
+              title: 'Information',
+              text: 'Please input Initial HASTAG',
+              icon: 'info',
+            });
+            $('#initialHASTAG').focus();
+            return;
+          }
+
+          // data table destroy
+          $('#tableResult').DataTable().destroy();
+
+          // loading
+          console.log('loading...');
+          $('#resultHASTAG').val('Loading...');
+
+          var url = 'https://www.instagram.com/web/search/topsearch/?context=hashtag&query=%23';
+          url += initialHASTAG;
+          var tag = '';
+          var ulLi = '';
+
+          // load ajax
+          $.ajax({
+            url: url,
+            method: 'get',
+            async: false,
+            success: function(data){
+              
+              // console.log(data);
+              for (var i = 0; i < data.hashtags.length; i++) {
+                // tag += ' ' + data.hashtags.length[i].hashtag.name;
+                // console.log(data.hashtags[i].hashtag.name);
+                tag += '#' + data.hashtags[i].hashtag.name + ' ';
+                ulLi += '<tr>';
+                ulLi += '<td>' + data.hashtags[i].hashtag.name + '</td>';
+                // ulLi += '<td>' + data.hashtags[i].hashtag.media_count + '</td>';
+                ulLi += '<td>' + (data.hashtags[i].hashtag.media_count).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); + '</td>';
+                ulLi += '</tr>';
+              }
+              $('#resultHASTAG').val(tag);
+              $('#listTag').html(ulLi);
+            }
+          }).fail(function(err){
+            alert( JSON.stringify(err) );
+          });
+
+          // build datatable
+          $('#tableResult').DataTable();
+
+        });
+      })
+    </script>
+  </body>
+</html>
