@@ -1,0 +1,84 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>jQuery json-viewer</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://rawgit.com/abodelot/jquery.json-viewer/master/json-viewer/jquery.json-viewer.js"></script>
+
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://rawgit.com/abodelot/jquery.json-viewer/master/json-viewer/jquery.json-viewer.css" type="text/css" rel="stylesheet">
+
+    <style media="screen">
+      .mb5{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    </style>
+
+    <script>
+      $(function() {
+        function renderJson() {
+          try {
+            var input = eval('(' + $('#json-input').val() + ')');
+          }
+          catch (error) {
+            return alert("Cannot eval JSON: " + error);
+          }
+          var options = {
+            collapsed: $('#collapsed').is(':checked'),
+            rootCollapsable: $('#root-collapsable').is(':checked'),
+            withQuotes: $('#with-quotes').is(':checked'),
+            withLinks: $('#with-links').is(':checked')
+          };
+          $('#json-renderer').jsonViewer(input, options);
+        }
+
+        // Generate on click
+        $('#btn-json-viewer').click(renderJson);
+
+        // Generate on option change
+        $('p.options input[type=checkbox]').click(renderJson);
+
+        // Display JSON sample on page load
+        renderJson();
+      });
+    </script>
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1><a href="https://github.com/abodelot/jquery.json-viewer">json-viewer</a></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mb5">
+        Options:
+        <label title="Generate node as collapsed">
+          <input type="checkbox" id="collapsed">Collapse nodes
+        </label>
+        <label title="Allow root element to be collasped">
+          <input type="checkbox" id="root-collapsable" checked>Root collapsable
+        </label>
+        <label title="Surround keys with quotes">
+          <input type="checkbox" id="with-quotes">Keys with quotes
+        </label>
+        <label title="Generate anchor tags for URL values">
+          <input type="checkbox" id="with-links" checked>
+          With Links
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 mb5">
+        <textarea class="form-control" id="json-input" rows="20" autocomplete="off">{"Hello":"World", "angka":[1,2,3]}</textarea>
+      </div>
+      <div class="col-md-1 mb5 text-center">
+        <button class="btn btn-primary" id="btn-json-viewer" title="run jsonViewer()"> >> </button>
+      </div>
+      <div class="col-md-6 mb5">
+        <pre id="json-renderer"></pre>
+      </div>
+    </div>
+  </body>
+</html>
